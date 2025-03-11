@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Next.js 14 Starter Kit
 
-## Getting Started
+Simple starter template for Next.js 14, Tailwind CSS, and TypeScript, ESLint, Prettier
 
-First, run the development server:
+## Feature
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### setting Technologies
+
+- Next.js 14 (app router)
+- Tailwind CSS
+- TypeScript
+- Prettier
+- Eslint
+
+#### 1. Tailwind CSS Preset: px-to-rem
+
+This preset automates the conversion of pixel values to rem units in your Tailwind configuration.
+
+- **Package Documentation**:  
+  [tailwindcss-preset-px-to-rem](https://classic.yarnpkg.com/en/package/tailwindcss-preset-px-to-rem)
+
+#### 2. ESLint with Airbnb Configuration
+
+This project includes **ESLint** with the **Airbnb JavaScript Style Guide** to enforce consistent code quality and style. It includes both ESLint rules and additional configurations for React and TypeScript.
+Additionally, it includes the **Next.js Core Web Vitals** ESLint plugin, which helps monitor and enforce best practices related to web performance metrics in Next.js applications.
+
+#### 3. Prettier with Tailwind CSS Plugin
+
+This project includes **Prettier** with the **Prettier Plugin for Tailwind CSS**. This plugin automatically sorts your Tailwind CSS classes in a consistent and predictable order whenever you format your code, making your styles more maintainable.
+
+## Project Structure
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+├── public
+│   ├── fonts
+│   ├── images
+├── src
+│   ├── app
+│   │   ├── (detail)
+│   │   │   └── [id]
+│   │   │       └── page.tsx
+│   │   ├── (user)
+│   │   │   ├── signin
+│   │   │   │   └── page.tsx
+│   │   │   ├── signup
+│   │   │   │   └── page.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components
+│   ├── hooks
+│   └── utils
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Available Scripts
 
-## Learn More
+- npm run dev - Start development server
+- npm run build - Build for production
+- npm run start - Start production server
+- npm run lint - Run ESLint
+- npm run format - Format code with Prettier
+- npm run format:fix - Format fix code with Prettier
 
-To learn more about Next.js, take a look at the following resources:
+## Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To improve your development experience, it is recommended to install the following VS Code Extensions for better support and productivity:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- ESLint: To highlight linting errors directly in the editor.
 
-## Deploy on Vercel
+- Prettier - Code Formatter: Automatically format your code according to your Prettier configuration.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Tailwind CSS IntelliSense: Provides intelligent autocompletion, syntax highlighting, and linting for Tailwind CSS classes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To make ESLint work seamlessly with **VS Code**, you can add the following settings in your `settings.json` file.
+
+```json
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx"]
+  }
+}
+```
+
+## Changelog
+
+### main (2025-03-11)
+
+- Basic setup of Next.js 14, TypeScript, and Tailwind CSS
+- Includes basic Prettier and ESLint configuration
